@@ -1,10 +1,14 @@
 # Simple Photo Gallery
-The aim of this project is to create a somewhat private photo gallery: 
-- that leverages on [Cloudflare Pages and NextJS](https://developers.cloudflare.com/pages/framework-guides/nextjs/)
+The aim of this project is to create a somewhat private photo gallery that makes use of stateless authentication: 
+- that leverages on serverless architecture i.e [Cloudflare Pages and NextJS](https://developers.cloudflare.com/pages/framework-guides/nextjs/)
 - that allows user with unique link to access
 - that allows permitted users to upload photos for the event gallery
 - Devcontainer was used to develop this project, do take note of the extra feature to download
 - Additionally, follow this [article](https://zenn.dev/frog/articles/f77b80a0d78497) to do `wrangler login` inside a devcontainer
+
+## Sample Images of the Application
+<img src = https://github.com/user-attachments/assets/bc335429-0249-4a84-a8ae-3c18bd03feaa height="550">
+<img src = https://github.com/user-attachments/assets/6ebd0e61-2aed-4fa0-aacb-724112c9dc5f width="400"> 
 
 ## Deploying and Testing Locally
 The following are settings required to test the Project Locally.
