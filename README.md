@@ -95,7 +95,7 @@ The scripts will be executed, and we simply need to follow the instructions by c
 
 ### Remote KV Binding
 - First, login to `dash.cloudflare.com`
-- Secondly, navigate to `Storage & Databases` -> `KV` -> 
+- Secondly, navigate to `Storage & Databases` -> `KV` -> "Create".
 - Thirdly, click on the create button, make sure the names are the same as the local KV.
 - Click on the newly created `KV namespace` -> `KV Pairs` -> "Add Entry". 
 
