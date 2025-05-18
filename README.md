@@ -1,15 +1,20 @@
 # Simple Photo Gallery
-The aim of this project is to create a somewhat private photo gallery that makes use of stateless authentication: 
+The aim of this project is to create a somewhat private and minimalistic photo gallery:
+- inspired by [Vercel's Image Gallery Starter](https://nextjsconf-pics.vercel.app/)
+- features 2 galleries, a gallery where users can upload images to and a gallery that contains pre-uploaded photos.
 - that leverages on serverless architecture i.e [Cloudflare Pages and NextJS](https://developers.cloudflare.com/pages/framework-guides/nextjs/)
-- that allows user with unique link to access
-- that allows permitted users to upload photos for the event gallery
-- Devcontainer was used to develop this project, do take note of the extra feature to download
+- that allows user access only through unique link provided.
+- that allows photos uploads to the event gallery for permitted users only.
+- Devcontainer was used to develop this project, do take note of the extra feature to download i.e wrangler.
 - Additionally, follow this [article](https://zenn.dev/frog/articles/f77b80a0d78497) to do `wrangler login` inside a devcontainer
 
 ## Sample Images of the Application
+- Rejects "unauthenticated" visits by default
+<img src = https://github.com/user-attachments/assets/7091eb04-4143-4891-8f34-9ad937b109d6 width="900">
+
+- Gallery application with upload function and image carousel.
 <img src = https://github.com/user-attachments/assets/6ebd0e61-2aed-4fa0-aacb-724112c9dc5f width="400">
-<img src = https://github.com/user-attachments/assets/bc335429-0249-4a84-a8ae-3c18bd03feaa height="550">
- 
+<img src = https://github.com/user-attachments/assets/3c873525-1612-4f9a-8a02-4e99232e8e0e width="400">
 
 ## Deploying and Testing Locally
 The following are settings required to test the Project Locally.
