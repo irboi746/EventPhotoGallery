@@ -3,15 +3,13 @@ The aim of this project is to create a somewhat private photo gallery:
 - that leverages on [Cloudflare Pages and NextJS](https://developers.cloudflare.com/pages/framework-guides/nextjs/)
 - that allows user with unique link to access
 - that allows permitted users to upload photos for the event gallery
-
-## Getting Started
 - Devcontainer was used to develop this project, do take note of the extra feature to download
 - Additionally, follow this [article](https://zenn.dev/frog/articles/f77b80a0d78497) to do `wrangler login` inside a devcontainer
 
-### Deploying and Testing Locally
+## Deploying and Testing Locally
 The following are settings required to test the Project Locally.
 
-#### `.devcontainer/devcontainer.json` and `package.json` Settings
+### `.devcontainer/devcontainer.json` and `package.json` Settings
 There are 2 modes which you want to test locally:
 - serving at 0.0.0.0 [so that we can access on local LAN from other devices]
 - serving at 127.0.0.1 [app will only be accesible on localhost]
@@ -44,7 +42,7 @@ There are 2 modes which you want to test locally:
 	}
 ```
 
-#### KV Binding Local
+### KV Binding Local
 Step 1 : Create a local KV pair using the following command
 ```
 wrangler kv key put --binding {namespace} \
@@ -74,7 +72,7 @@ Step 4: Add the value in `wrangler.jsonrc` as below.
 ```
 
 
-#### Local Secrets `.dev.vars` 
+### Local Secrets `.dev.vars` 
 For local development, we will need to store the secrets in `.dev.vars`. Please refer to [Remote Secrets](#remote-secrets) for secrets deployment.
 
 - `R2_API_ENDPOINT` : value of endpoint for R2 object storage 
@@ -86,7 +84,7 @@ For local development, we will need to store the secrets in `.dev.vars`. Please 
 - `ENCKEY` : value of encryption Key for symmetric encryption of JWT 
 - `EVENT_ID` : value of event id which will be used in JWT
 
-### Deploying to Pages
+## Deploying to Pages
 To deploy to Pages, we will simply need to login first using `wrangler login` before running: 
 
 ```
@@ -95,26 +93,26 @@ npm run deploy
 
 The scripts will be executed, and we simply need to follow the instructions by cloudflare.
 
-#### Remote KV Binding
+### Remote KV Binding
 - First, login to `dash.cloudflare.com`
 - Secondly, navigate to `Storage & Databases` -> `KV` -> 
 - Thirdly, click on the create button, make sure the names are the same as the local KV.
 - Click on the newly created `KV namespace` -> `KV Pairs` -> "Add Entry". 
 
-#### Remote Secrets
+### Remote Secrets
 - First, login to `dash.cloudflare.com`
 - Secondly, navigate to `Compute Workers` -> `Workers & Pages` -> `app-name` -> `Settings` -> `Variables and Secrets`
 - Thirdly, click on "Add" button 
 - Lastly, copy and paste values in `.dev.vars` if they are the same. Otherwise, we can still copy and paste, but change the value accordingly.
 
-### Other Configurations
+## Other Configurations
 This section details the other configurations that is required for the application to work.
 
-#### JWT Expiration and Encyrption Algorithm
+### JWT Expiration and Encyrption Algorithm
 - The configurations for JWT Expiration Time and Encryption Algorithm used is found in the `/app/utils/jwtEncryption.ts`.
 
-#### Background Colour
+### Background Colour
 - Configuration to change the webpage background colour is found in `/app/global.css`
 
-#### Allowing Images to be Displayed
+### Allowing Images to be Displayed
 - Images will not be displayed due to CORS by default, we will need to whitelist the allowed domains in `next.config.ts`
