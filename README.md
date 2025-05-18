@@ -108,7 +108,7 @@ The scripts will be executed, and we simply need to follow the instructions by c
 - Lastly, copy and paste values in `.dev.vars` if they are the same. Otherwise, we can still copy and paste, but change the value accordingly.
 
 ### Other Configurations
-This section details the other configurations that 
+This section details the other configurations that is required for the application to work.
 
 #### JWT Expiration and Encyrption Algorithm
 - The configurations for JWT Expiration Time and Encryption Algorithm used is found in the `/app/utils/jwtEncryption.ts`.
