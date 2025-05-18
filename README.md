@@ -87,7 +87,13 @@ For local development, we will need to store the secrets in `.dev.vars`. Please 
 - `EVENT_ID` : value of event id which will be used in JWT
 
 ### Deploying to Pages
-To deploy to 
+To deploy to Pages, we will simply need to login first using `wrangler login` before running: 
+
+```
+npm run deploy
+```
+
+The scripts will be executed, and we simply need to follow the instructions by cloudflare.
 
 #### Remote KV Binding
 - First, login to `dash.cloudflare.com`
@@ -101,3 +107,14 @@ To deploy to
 - Thirdly, click on "Add" button 
 - Lastly, copy and paste values in `.dev.vars` if they are the same. Otherwise, we can still copy and paste, but change the value accordingly.
 
+### Other Configurations
+This section details the other configurations that 
+
+#### JWT Expiration and Encyrption Algorithm
+- The configurations for JWT Expiration Time and Encryption Algorithm used is found in the `/app/utils/jwtEncryption.ts`.
+
+#### Background Colour
+- Configuration to change the webpage background colour is found in `/app/global.css`
+
+#### Allowing Images to be Displayed
+- Images will not be displayed due to CORS by default, we will need to whitelist the allowed domains in `next.config.ts`
